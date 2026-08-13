@@ -31,7 +31,7 @@ def retrieve_course(course_id: int):
 
 
 @router.put("/{course_id}")
-def edit_course(course_id: int, course: CourseCreate):
+def edit_course(course_id: int, course: CourseUpdate):
     updated_course = update_course(course_id, course)
     return updated_course.to_dict()
 

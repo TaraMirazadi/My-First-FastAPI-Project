@@ -5,9 +5,7 @@
         "last_name": "Azadi",
         "personal_code": "401071",
         "department": "Math",
-        "course_ids": [
-            2
-        ]
+        "course_ids": []
     },
     {
         "id": 2,
@@ -16,7 +14,8 @@
         "personal_code": "401072",
         "department": "Computer",
         "course_ids": [
-            1
+            1,
+            2
         ]
     }
 ]

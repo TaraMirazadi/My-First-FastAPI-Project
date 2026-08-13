@@ -14,7 +14,7 @@
         "unit": 3,
         "code": "CS302",
         "capacity": 35,
-        "professor_id": 1,
+        "professor_id": 2,
         "student_ids": []
     }
 ]

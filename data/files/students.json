@@ -5,9 +5,7 @@
         "last_name": "Ahmadi",
         "student_number": "40415071",
         "major": "Computer Engineering",
-        "selected_course_ids": [
-            2
-        ]
+        "selected_course_ids": []
     },
     {
         "id": 2,
@@ -15,9 +13,6 @@
         "last_name": "Mirazadi",
         "student_number": "40415072",
         "major": "Computer Engineering",
-        "selected_course_ids": [
-            2,
-            1
-        ]
+        "selected_course_ids": []
     }
 ]
