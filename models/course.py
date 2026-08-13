@@ -41,7 +41,7 @@ class Course:
         if self.professor is not None and professor.id != self.professor.id:
             raise ProfessorAlreadyAssignedException("این درس استاد دارد")
         self.professor = professor
-        professor.assign_course(self)
+        professor.assign_courses(self)
 
     def to_dict(self) -> dict:
         return {

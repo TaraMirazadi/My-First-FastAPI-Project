@@ -1,1 +1,20 @@
-[]
+[
+    {
+        "id": 1,
+        "title": "Python Programming",
+        "unit": 4,
+        "code": "CS301",
+        "capacity": 30,
+        "professor_id": 2,
+        "student_ids": []
+    },
+    {
+        "id": 2,
+        "title": "Mathematics",
+        "unit": 3,
+        "code": "CS302",
+        "capacity": 35,
+        "professor_id": 1,
+        "student_ids": []
+    }
+]

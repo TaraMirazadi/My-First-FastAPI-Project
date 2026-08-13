@@ -1,1 +1,22 @@
-[]
+[
+    {
+        "id": 1,
+        "first_name": "Mahdi",
+        "last_name": "Azadi",
+        "personal_code": "401071",
+        "department": "Math",
+        "course_ids": [
+            2
+        ]
+    },
+    {
+        "id": 2,
+        "first_name": "Armin",
+        "last_name": "Rashno",
+        "personal_code": "401072",
+        "department": "Computer",
+        "course_ids": [
+            1
+        ]
+    }
+]

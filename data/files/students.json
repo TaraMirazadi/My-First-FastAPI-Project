@@ -1,10 +1,23 @@
 [
     {
         "id": 1,
+        "first_name": "Ali",
+        "last_name": "Ahmadi",
+        "student_number": "40415071",
+        "major": "Computer Engineering",
+        "selected_course_ids": [
+            2
+        ]
+    },
+    {
+        "id": 2,
         "first_name": "Tara",
         "last_name": "Mirazadi",
         "student_number": "40415072",
         "major": "Computer Engineering",
-        "selected_course_ids": []
+        "selected_course_ids": [
+            2,
+            1
+        ]
     }
 ]
