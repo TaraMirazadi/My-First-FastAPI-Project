@@ -40,7 +40,9 @@ def shutdown_save_data():
 @app.get("/",tags=["Root"])
 def root():
     return {
-        "message": "به سیستم انتخاب واحد خوش آمدید"
+        "message":
+        "welcome to the course selection system"
+        "به سیستم انتخاب واحد خوش آمدید"
     }
 
 
