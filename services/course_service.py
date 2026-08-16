@@ -68,7 +68,7 @@ def delete_course(course_id: int) -> None:
         if course in student.selected_courses:
             student.selected_courses.remove(course)
 
-    if course.professor is not None and course.professor.courses:
+    if course.professor is not None and course in course.professor.courses:
         course.professor.courses.remove(course)
 
 
