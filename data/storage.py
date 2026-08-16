@@ -86,7 +86,7 @@ def save_all() -> None:
             "code": course.code,
             "capacity": course.capacity,
             "professor_id": None if course.professor is None else course.professor.id,
-            "student_ids": [student.id for student in course.student]
+            "student_ids": [student.id for student in course.students]
         })
 
     _write_json(STUDENTS_FILE, students_data)

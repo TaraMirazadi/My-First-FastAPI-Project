@@ -53,7 +53,7 @@ def update_course(course_id: int, course_data: CourseUpdate) -> Course:
         course.unit = course_data.unit
 
     if course_data.capacity is not None:
-        if course_data.capacity < len(course.student):
+        if course_data.capacity < len(course.students):
             raise InvalidDataException("ظرفیت جدید نمی تواند کمتر از دانشجویان ثبت نام شده باشد")
         course.capacity = course_data.capacity
 
@@ -64,7 +64,7 @@ def update_course(course_id: int, course_data: CourseUpdate) -> Course:
 def delete_course(course_id: int) -> None:
     course = get_course_by_id(course_id)
 
-    for student in list(course.student):
+    for student in list(course.students):
         if course in student.selected_courses:
             student.selected_courses.remove(course)
 
