@@ -8,6 +8,7 @@ def select_course_for_student(student_id: int, course_id: int) -> Student:
     student = get_student_by_id(student_id)
     course = get_course_by_id(course_id)
     student.select_course(course)
+    course.add_student(student)
     save_all()
     return student
 
@@ -16,6 +17,7 @@ def drop_course_for_student(student_id: int, course_id: int):
     student = get_student_by_id(student_id)
     course = get_course_by_id(course_id)
     student.drop_course(course)
+    course.remove_student(student)
     save_all()
     return student
 

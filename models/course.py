@@ -15,24 +15,24 @@ class Course:
         self.unit = unit
         self.capacity = capacity
         self.professor = None
-        self.student = []
+        self.students = []
 
     def is_full(self) -> bool:
-        return len(self.student) >= self.capacity
+        return len(self.students) >= self.capacity
 
     def add_student(self, student):
-        if student in self.student:
+        if student in self.students:
             raise CourseAlreadySelectedException(
                 " دانشجو قبلا در این درس ثبت شده است ")
         if self.is_full():
             raise CourseFullException("ظرفیت این درس نکمیل شده است")
-        self.student.append(student)
+        self.students.append(student)
 
     def remove_student(self, student):
-        if student in self.student:
+        if student not in self.students:
             raise CourseNotSelectedException(
                 " دانشجو در این درس ثبت نام نشده است ")
-        self.student.remove(student)
+        self.students.remove(student)
 
     def assign_professor(self, professor):
         if self.professor is not None and self.professor.id == professor.id:
@@ -50,7 +50,7 @@ class Course:
             "unit": self.unit,
             "code": self.code,
             "capacity": self.capacity,
-            "remaining capacity": self.capacity - len(self.student),
+            "remaining capacity": self.capacity - len(self.students),
             "professor": None if self.professor is None else {
                 "id": self.professor.id,
                 "first name": self.professor.first_name,
@@ -64,6 +64,6 @@ class Course:
                     "last name": student.last_name,
                     "student number": student.student_number,
                 }
-                for student in self.student
+                for student in self.students
             ],
         }

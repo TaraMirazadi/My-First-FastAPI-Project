@@ -163,13 +163,13 @@ def load_all() -> None:
 
         professor_id = item.get("professor_id")
         if professor_id is not None and int(professor_id) in professors:
-            professor = professors[int(professor.id)]
+            professor = professors[int(professor_id)]
             course.professor = professor
             if course not in professor.courses:
                 professor.courses.append(course)
 
         for student_id in item.get("student_ids", []):
-            student = student.get(int(student_id))
+            student = students.get(int(student_id))
             if student is not None:
                 if student not in course.students:
                     course.students.append(student)

@@ -42,7 +42,7 @@ def remove_course(course_id: int):
     return {"message": "درس با موفقیت حذف شد "}
 
 
-@router.post("/{course_id}/professors/{professors_id}")
+@router.post("/{course_id}/professors/{professor_id}")
 def assign_professor(course_id: int, professor_id: int):
     course = assign_professor_to_course(course_id, professor_id)
     return {
